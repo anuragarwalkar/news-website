@@ -14,7 +14,47 @@
     --tech-color:#009cff;
 }
 
+.category{
+    color: #fff;
+    display: inline-block;
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-size: 0.55rem;
+    padding: 0.44rem 0.6rem;
+    margin-bottom: 0.5rem;
+}
 
+.category-sports{
+    background: var(--sport-color);
+}
+
+.category-ent{
+    background: var(--ent-color);
+}
+
+.category-tech{
+    background: var(--tech-color);
+}
+
+.btn{
+    display: inline-block;
+    border: none;
+    background: var(--dark-color);
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+}
+
+.btn-light{background: var(--light-color)}
+
+.btn-primary{background: var(--primary-color)}
+
+.btn-secoundary{background: var(--secoundary-color)}
+
+.btn-block{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
 *{  
     margin:0;
     padding: 0;
@@ -61,6 +101,10 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
 }
 
+.card{
+    background: #fff;
+    padding: 1rem;
+}
 #main-nav {
     position: sticky;
     z-index: 2;
@@ -108,5 +152,51 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: .5rem;
 }
 
+#showcase{
+    color: #fff;
+    background: var(--dark-color);
+    padding: 1rem;
+    position: relative;
+}
+
+#showcase::before{
+    content: '';
+    background: url('../img/featured.jpg') no-repeat center center/cover;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+#showcase .showcase-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    height: 50vh;
+}
+
+#showcase .showcase-content{
+    z-index: 1;
+}
+
+#showcase .showcase-content p{
+    margin-bottom:1rem; 
+}
+
+#home-articles .articles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:1rem;
+}
 
 
+#home-articles .articles-container > *:first-child,
+#home-articles .articles-container > *:last-child{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap:1rem;
+    align-items: center;
+    grid-column: 1 /span 2;
+}
